@@ -75,14 +75,14 @@ return {
     --   },
     -- }
     dashboard.section.buttons.val = {
-      dashboard.button("f", "  Find File",       "<cmd> lua LazyVim.pick()() <cr>"),
-      dashboard.button("n", "  New File",        "<cmd> ene | startinsert <cr>"),
-      dashboard.button("g", "  Find Text",       "<cmd> lua LazyVim.pick('live_grep')() <cr>"),
-      dashboard.button("r", "  Recent Files",    "<cmd> lua LazyVim.pick('oldfiles')() <cr>"),
-      dashboard.button("c", "  Config",          "<cmd> lua LazyVim.pick.config_files()() <cr>"),
+      dashboard.button("f", "  Find File", "<cmd> lua LazyVim.pick() <cr>"),
+      dashboard.button("n", "  New File", "<cmd> ene | startinsert <cr>"),
+      dashboard.button("g", "  Find Text", "<cmd> lua LazyVim.pick('live_grep') <cr>"),
+      dashboard.button("r", "  Recent Files", "<cmd> lua LazyVim.pick('oldfiles') <cr>"),
+      dashboard.button("c", "  Config", "<cmd> lua LazyVim.pick.config_files() <cr>"),
       dashboard.button("s", "  Restore Session", "<cmd> lua require('persistence').load() <cr>"),
-      dashboard.button("L", "󰒲  Lazy",            "<cmd> Lazy <cr>"),
-      dashboard.button("q", "  Quit",            "<cmd> qa <cr>"),
+      dashboard.button("L", "󰒲  Lazy", "<cmd> Lazy <cr>"),
+      dashboard.button("q", "  Quit", "<cmd> qa <cr>"),
     }
 
     -- 设置按钮之间的间距 (对应 snacks 的 gap = 1)
@@ -96,7 +96,7 @@ return {
       -- –threshold 这是一个色彩相关的数据，调整以确保生成满足你色彩需求的图片
       -- 剩余的指令就是生成适合alpha配置的dashboard图片标题信息的结构体lua文件
       header,
-      { type="padding", val=1 }, -- 空格栏隔开内容
+      { type = "padding", val = 1 }, -- 空格栏隔开内容
       {
         type = "group",
         val = {
@@ -148,3 +148,4 @@ return {
     alpha.setup(dashboard.opts)
   end,
 }
+
